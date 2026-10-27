@@ -46,7 +46,8 @@
     "Situação do CAR": "Aguardando análise (inscrito em 2015, retificado em 2026)",
     "Área na matrícula": "18,23 ha (diferença de 0,64 ha para o CAR)",
     "Licença ambiental": "RLAS nº 383652-R2 – válida até 21/08/2032",
-    "Água": "Poço tubular de 150 m (Aquífero Itararé) – DUIO 12509/2022 vencida em 22/06/2025"
+    "Água": "Poço tubular de 150 m (Aquífero Itararé) – DUIO 12509/2022 vencida em 22/06/2025",
+    "Matrícula": "7.679 – 18,23 ha"
    },
    "documentos": [
     {
@@ -64,11 +65,15 @@
    ],
    "adequacoes": [
     {
-     "nome": "Licença ambiental (RLAS 383652-R2) válida até 21/08/2032",
+     "nome": "Licença ambiental RLAS 383652-R2 emitida em 21/08/2026, válida até 21/08/2032",
      "status": "Concluída"
     },
     {
-     "nome": "Renovar a dispensa de outorga do poço (DUIO 12509/2022 venceu em 22/06/2025)",
+     "nome": "Entregar ao IAT a portaria de outorga do poço até 19/11/2026 (condicionante 7 da licença: 90 dias após a emissão)",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Renovar a dispensa de outorga do poço – a DUIO 12509/2022 venceu em 22/06/2025",
      "status": "Pendente"
     },
     {
@@ -76,11 +81,15 @@
      "status": "Pendente"
     },
     {
-     "nome": "CAR aguardando análise do IAT",
+     "nome": "Renovar o Cadastro Técnico Federal (IBAMA) nº 5352983 – validade 29/09/2026 citada na licença",
+     "status": "Pendente"
+    },
+    {
+     "nome": "CAR retificado em 2026 aguardando análise – conferir uso do solo, APP e Reserva Legal (recibo de 2015 está zerado)",
      "status": "Em andamento"
     },
     {
-     "nome": "Conferir no CAR o uso do solo, APP e Reserva Legal (recibo de 2015 está zerado)",
+     "nome": "Área: matrícula 7.679 tem 18,23 ha e o CAR 18,87 ha (diferença de 0,64 ha)",
      "status": "Pendente"
     }
    ],
@@ -119,7 +128,8 @@
     "Área do imóvel (CAR)": "8,46 ha no SICAR · recibo de 2019 traz 6,07 ha (CAR retificado em 2026)",
     "Situação do CAR": "Aguardando análise",
     "Licença ambiental": "LAC nº 372424 – válida até 08/04/2028 (empreendimento “Sítio Rodriguez”)",
-    "Água": "Poço tubular – DUIO 11103/2026, válida até 18/02/2032"
+    "Água": "Poço tubular – DUIO 11103/2026, válida até 18/02/2032",
+    "Matrícula": "15.921 – 6,05 ha (compra em 03/11/2022)"
    },
    "documentos": [
     {
@@ -137,15 +147,23 @@
    ],
    "adequacoes": [
     {
-     "nome": "Licença ambiental (LAC 372424) válida até 08/04/2028",
+     "nome": "Licença ambiental LAC 372424 válida até 08/04/2028",
      "status": "Concluída"
     },
     {
-     "nome": "Dispensa de outorga (DUIO 11103/2026) válida até 18/02/2032",
+     "nome": "Dispensa de outorga DUIO 11103/2026 válida até 18/02/2032",
      "status": "Concluída"
     },
     {
-     "nome": "Verificar o poço: coordenada da DUIO fica a 3,3 km do aviário, fora do imóvel",
+     "nome": "Comprovar a instalação do medidor de vazão – prazo da DUIO era 19/05/2026",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Enviar ao IAT as leituras semanais de vazão até 18/02/2027",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Verificar o poço: a coordenada da DUIO fica a 3,3 km do aviário, fora do imóvel",
      "status": "Pendente"
     },
     {
@@ -153,12 +171,16 @@
      "status": "Pendente"
     },
     {
-     "nome": "Uniformizar o nome do imóvel (CAR: Sítio Bom Pastor · licença: Sítio Rodriguez)",
+     "nome": "Área: matrícula 15.921 tem 6,05 ha e o CAR 8,46 ha – CAR maior que a matrícula",
      "status": "Pendente"
     },
     {
-     "nome": "Atualizar o recibo do CAR na pasta (2019, 6,07 ha) – CAR retificado com 8,46 ha aguarda análise",
-     "status": "Em andamento"
+     "nome": "Sobreposição de 0,27 ha com o CAR do antigo proprietário (PR-4109708-48F7…, 10,03 ha, ativo)",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Uniformizar o nome do imóvel (CAR: Sítio Bom Pastor · licença: Sítio Rodriguez)",
+     "status": "Pendente"
     }
    ],
    "pontos": [
@@ -198,7 +220,7 @@
     "Matrícula": "22.026 – 5,2067 ha",
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386770 – válida até 25/09/2031",
-    "Água": "Captação superficial compartilhada com o Lote 01 A – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032"
+    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração"
    },
    "documentos": [
     {
@@ -216,19 +238,39 @@
    ],
    "adequacoes": [
     {
-     "nome": "Licença ambiental (LAS 386770) válida até 25/09/2031",
+     "nome": "Licença ambiental LAS 386770 válida até 25/09/2031",
      "status": "Concluída"
     },
     {
-     "nome": "Dispensa de outorga da captação superficial (DUIO 16682/2026) válida até 11/08/2032",
+     "nome": "Matrícula 22.026 em nome de Mario Lucio Pozzan (compra em 09/03/2026) e georreferenciamento SIGEF certificado",
      "status": "Concluída"
     },
     {
-     "nome": "Verificar a fonte de água: a licença cita poço profundo (0,49 m³/h) sem outorga; a DUIO é de captação superficial a 160 m, fora do lote",
+     "nome": "Dispensa de outorga DUIO 16682/2026 (captação em mina/nascente, compartilhada com o Lote 01 A) válida até 11/08/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Entregar ao IAT a outorga do poço até 23/01/2027 (condicionante 17: 120 dias após a licença) – anuência para perfuração 12352/2026 válida até 11/09/2027",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Instalar o medidor e enviar as leituras de vazão da captação até 11/08/2027",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Retificar o CAR matriz da Fazenda Santa Maria (141,5 ha, em nome do antigo proprietário), que se sobrepõe a todo o lote",
      "status": "Pendente"
     },
     {
-     "nome": "CAR aguardando análise do IAT",
+     "nome": "Averbação de preservação florestal (Av.24 da matrícula 4.158) transportada para a matrícula – o CAR não declara Reserva Legal",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Implantar o Plano de Controle Ambiental aprovado antes de iniciar a operação (condicionante 15)",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "CAR inscrito em 01/03/2026 aguardando análise",
      "status": "Em andamento"
     }
    ],
@@ -277,7 +319,7 @@
     "Matrícula": "22.024 – 6,2428 ha",
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386771 – válida até 25/09/2031",
-    "Água": "Captação superficial compartilhada com o Lote 01 C – DUIO 16682/2026, válida até 11/08/2032"
+    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração"
    },
    "documentos": [
     {
@@ -295,19 +337,35 @@
    ],
    "adequacoes": [
     {
-     "nome": "Licença ambiental (LAS 386771) válida até 25/09/2031",
+     "nome": "Licença ambiental LAS 386771 válida até 25/09/2031",
      "status": "Concluída"
     },
     {
-     "nome": "Dispensa de outorga da captação superficial (DUIO 16682/2026) válida até 11/08/2032",
+     "nome": "Matrícula 22.024 em nome de Mauro Lucas Pozzan (compra em 09/03/2026) e georreferenciamento SIGEF certificado",
      "status": "Concluída"
     },
     {
-     "nome": "Verificar a fonte de água: a licença cita poço profundo (0,49 m³/h) sem outorga; a DUIO é de captação superficial a 265 m, fora do lote",
+     "nome": "Dispensa de outorga DUIO 16682/2026 (captação em mina/nascente, compartilhada com o Lote 01 C) válida até 11/08/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Entregar ao IAT a outorga do poço até 23/01/2027 (condicionante 17) – anuência para perfuração 12353/2026 válida até 11/09/2027",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Retificar o CAR matriz da Fazenda Santa Maria (141,5 ha), que se sobrepõe a 6,16 ha dos 6,24 ha do lote",
      "status": "Pendente"
     },
     {
-     "nome": "CAR aguardando análise do IAT",
+     "nome": "Averbação de preservação florestal (Av.24 da matrícula 4.158) transportada para a matrícula – o CAR não declara Reserva Legal",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Implantar o Plano de Controle Ambiental aprovado antes de iniciar a operação (condicionante 15)",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "CAR inscrito em 01/03/2026 aguardando análise",
      "status": "Em andamento"
     }
    ],
@@ -346,7 +404,8 @@
     "Área do imóvel (CAR)": "5,88 ha no SICAR · recibo de 2015 traz 2,81 ha",
     "Situação do CAR": "Analisado, em conformidade com a Lei 12.651/2012",
     "Licença ambiental": "LAC nº 379544 – válida até 02/07/2028",
-    "Água": "Poço raso – DUIO 15365/2026, válida até 01/07/2032"
+    "Água": "Poço raso – DUIO 15365/2026, válida até 01/07/2032",
+    "Matrícula": "465 (2,85 ha) + 13.340 – unificadas no CCIR com 5,8757 ha"
    },
    "documentos": [
     {
@@ -364,19 +423,27 @@
    ],
    "adequacoes": [
     {
-     "nome": "Licença ambiental (LAC 379544) válida até 02/07/2028",
+     "nome": "Licença ambiental LAC 379544 válida até 02/07/2028",
      "status": "Concluída"
     },
     {
-     "nome": "Dispensa de outorga (DUIO 15365/2026) válida até 01/07/2032",
+     "nome": "Dispensa de outorga DUIO 15365/2026 válida até 01/07/2032",
      "status": "Concluída"
     },
     {
-     "nome": "CAR analisado e em conformidade",
+     "nome": "CAR analisado e em conformidade (5,88 ha = matrículas 465 e 13.340, unificadas no CCIR)",
      "status": "Concluída"
     },
     {
-     "nome": "Atualizar na pasta o recibo do CAR (2015, 2,81 ha) pelo recibo atual (5,88 ha)",
+     "nome": "Comprovar a instalação do medidor de vazão – prazo da DUIO era 29/09/2026",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Enviar ao IAT as leituras semanais de vazão até 01/07/2027",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Juntar à pasta a matrícula 13.340 (só a 465, com 2,85 ha, foi enviada) e o recibo atual do CAR",
      "status": "Pendente"
     }
    ],
@@ -473,6 +540,78 @@
     "titulo": "Dispensa de outorga DUIO 15365/2026",
     "arquivo": "docs/G05/outorga.pdf"
    }
+  },
+  {
+   "data": "2026-11-19",
+   "titulo": "Sítio São Benedito – entregar portaria de outorga do poço (condicionante 7 da RLAS)",
+   "documento": {
+    "titulo": "Licença ambiental RLAS 383652-R2",
+    "arquivo": "docs/G01/licenca.pdf"
+   }
+  },
+  {
+   "data": "2026-09-29",
+   "titulo": "Sítio São Benedito – Cadastro Técnico Federal (IBAMA) nº 5352983",
+   "documento": {
+    "titulo": "Licença ambiental RLAS 383652-R2",
+    "arquivo": "docs/G01/licenca.pdf"
+   }
+  },
+  {
+   "data": "2026-05-19",
+   "titulo": "Sítio Bom Pastor – comprovar instalação do medidor de vazão (DUIO 11103/2026)",
+   "documento": {
+    "titulo": "Dispensa de outorga DUIO 11103/2026",
+    "arquivo": "docs/G02/outorga.pdf"
+   }
+  },
+  {
+   "data": "2027-02-18",
+   "titulo": "Sítio Bom Pastor – enviar leituras anuais de vazão ao IAT",
+   "documento": {
+    "titulo": "Dispensa de outorga DUIO 11103/2026",
+    "arquivo": "docs/G02/outorga.pdf"
+   }
+  },
+  {
+   "data": "2027-01-23",
+   "titulo": "Fazenda Santa Maria (Lotes 01 A e 01 C) – entregar outorga do poço (condicionante 17)",
+   "documento": {
+    "titulo": "Licença ambiental LAS 386770",
+    "arquivo": "docs/G03/licenca.pdf"
+   }
+  },
+  {
+   "data": "2027-08-11",
+   "titulo": "Fazenda Santa Maria – medidor e leituras anuais da captação (DUIO 16682/2026)",
+   "documento": {
+    "titulo": "Dispensa de outorga DUIO 16682/2026",
+    "arquivo": "docs/G03/outorga.pdf"
+   }
+  },
+  {
+   "data": "2027-09-11",
+   "titulo": "Fazenda Santa Maria – validade das anuências de perfuração do poço (12352 e 12353/2026)",
+   "documento": {
+    "titulo": "Licença ambiental LAS 386770",
+    "arquivo": "docs/G03/licenca.pdf"
+   }
+  },
+  {
+   "data": "2026-09-29",
+   "titulo": "Chácara Vilela – comprovar instalação do medidor de vazão (DUIO 15365/2026)",
+   "documento": {
+    "titulo": "Dispensa de outorga DUIO 15365/2026",
+    "arquivo": "docs/G05/outorga.pdf"
+   }
+  },
+  {
+   "data": "2027-07-01",
+   "titulo": "Chácara Vilela – enviar leituras anuais de vazão ao IAT",
+   "documento": {
+    "titulo": "Dispensa de outorga DUIO 15365/2026",
+    "arquivo": "docs/G05/outorga.pdf"
+   }
   }
  ],
  "camadas": [],
@@ -482,7 +621,7 @@
   "etapas": [
    {
     "nome": "Etapa 1",
-    "texto": "– 5 granjas organizadas (Ibaiti, Joaquim Távora e Wenceslau Braz): CAR, licença, água e pendências (concluída)"
+    "texto": "– 5 granjas organizadas (Ibaiti, Joaquim Távora e Wenceslau Braz): CAR, matrícula, licença, água, condicionantes e pendências revisados em 27/10/2026 (concluída)"
    },
    {
     "nome": "Etapa 2",
