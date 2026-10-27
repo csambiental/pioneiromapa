@@ -469,3 +469,16 @@ table.ind tr.pos td { color: #1d6b3e; font-weight: 600; }
 .btn-externo { width: 100%; margin-top: 12px; font-weight: 600; }
 .doc-dialog.largo { width: min(1400px, 98vw); height: 94vh; }
 .doc-dialog.largo iframe { background: #fff; }
+
+/* ---------- pendências em destaque ---------- */
+.pend-badge { background: #e53935; color: #fff; font-size: .7rem; font-weight: 700; padding: 2px 7px; border-radius: 999px; white-space: nowrap; margin-left: auto; }
+.farm-head .pend-badge { margin-left: 6px; }
+.pend-box { background: #fdecea; border-left: 4px solid #e53935; border-radius: 6px; padding: 8px 10px; margin: 0 0 10px; font-size: .8rem; color: #5f1410; }
+.pend-box strong { display: block; margin-bottom: 4px; color: #b71c1c; }
+.pend-box ul, .pend-grupo ul { margin: 0; padding-left: 18px; }
+.pend-box li, .pend-grupo li { margin: 2px 0; }
+.status-tag.pendente { background: #fdecea; color: #b71c1c; }
+.pend-grupo { border-top: 1px solid var(--borda); padding: 8px 0; font-size: .8rem; }
+.pend-titulo { display: flex; align-items: center; gap: 8px; width: 100%; background: none; border: 0; padding: 0 0 4px; font: inherit; font-weight: 600; text-align: left; cursor: pointer; color: inherit; }
+.pend-titulo .swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 12px; }
+.mapboxgl-popup .pend-box { margin-top: 8px; }

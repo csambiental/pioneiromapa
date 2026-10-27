@@ -11,7 +11,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY3NhbWJpZW50YWwiLCJhIjoiY205MWk4eHU4MDE3czJxc
 const STATUS = {
     'Concluída':    { cor: '#2e9e5b', classe: 'ok' },
     'Em andamento': { cor: '#e0a100', classe: 'andamento' },
-    'Pendente':     { cor: '#9aa0a6', classe: 'pendente' }
+    'Pendente':     { cor: '#e53935', classe: 'pendente' }
 };
 const ORDEM_STATUS = ['Concluída', 'Em andamento', 'Pendente'];
 
@@ -329,7 +329,9 @@ function renderFazendas() {
         .filter(f => !filtroFazendas || semAcento(f.nome + ' ' + Object.values(f.info || {}).join(' ')).includes(filtroFazendas)).map(f => {
         const cont = contarStatus(f.adequacoes);
         const aberta = selecionada === f.id;
-        const itens = f.adequacoes.map(a => {
+        const ordemSt = { 'Pendente': 0, 'Em andamento': 1, 'Concluída': 2 };
+        const pend = f.adequacoes.filter(a => a.status === 'Pendente');
+        const itens = [...f.adequacoes].sort((x, y) => (ordemSt[x.status] ?? 0) - (ordemSt[y.status] ?? 0)).map(a => {
             const st = STATUS[a.status] || STATUS['Pendente'];
             const quando = a.concluida_em ? ` · ${esc(a.concluida_em)}` : '';
             const nota = a.nota ? `<span class="item-note">${esc(a.nota)}</span>` : '';
@@ -337,7 +339,7 @@ function renderFazendas() {
                 `<button type="button" class="doc-btn" data-arquivo="${esc(d.arquivo)}" data-titulo="${esc(d.titulo)}">📄 ${esc(d.titulo)}</button>`).join('');
             const extra = (nota || docs) ? `<span class="item-extra">${nota}${docs ? `<span class="doc-list">${docs}</span>` : ''}</span>` : '';
             return `<li><span class="status-dot" style="background:${st.cor}"></span>
-                        <span class="item-text">${esc(a.item)}</span>
+                        <span class="item-text">${esc(a.item || a.nome)}</span>
                         <span class="status-tag ${st.classe}">${esc(a.status)}${quando}</span>${extra}</li>`;
         }).join('');
         return `
@@ -345,10 +347,12 @@ function renderFazendas() {
             <button class="farm-head" type="button" aria-expanded="${aberta}">
                 <span class="swatch" style="background:${f.cor}"></span>
                 <span class="farm-name">${esc(f.nome)}</span>
+                ${pend.length ? `<span class="pend-badge" title="${pend.length} pendência(s)">⚠ ${pend.length}</span>` : ''}
                 <span class="farm-meta">${f.area_ha ? `${fmt(f.area_ha, 1)} ha` : (f.nascentes ? `${f.nascentes} nasc.` : '')}${f.adequacoes.length ? ` · ${cont['Concluída']}/${f.adequacoes.length}` : ''}</span>
             </button>
             ${f.adequacoes.length ? `<div class="mini-progress">${barraProgresso(cont, f.adequacoes.length)}</div>` : ''}
             <div class="farm-body">
+                ${pend.length ? `<div class="pend-box"><strong>⚠ O que está pendente (${pend.length})</strong><ul>${pend.map(a => `<li>${esc(a.item || a.nome)}</li>`).join('')}</ul></div>` : ''}
                 <dl>
                     <dt>CAR</dt><dd class="mono">${esc(f.car)}</dd>
                     ${f.area_ha ? `<dt>Área declarada</dt><dd>${fmt(f.area_ha, 2)} ha</dd>` : ''}
@@ -357,7 +361,7 @@ function renderFazendas() {
                 </dl>
                 ${fichaHtml(f)}
                 ${indicadoresHtml(f)}
-                ${f.adequacoes.length ? `<h3>Adequações (${f.adequacoes.length})</h3><ul class="adeq-list">${itens}</ul>` : ''}
+                ${f.adequacoes.length ? `<h3>Todas as adequações (${f.adequacoes.length})</h3><ul class="adeq-list">${itens}</ul>` : ''}
                 ${(f.documentos || []).map(d => `<button type="button" class="doc-btn" data-arquivo="${esc(d.arquivo)}" data-titulo="${esc(d.titulo)}">📄 ${esc(d.titulo)}</button>`).join('')}
                 ${/^[A-Z]{2}-\d{7}-/.test(f.car || '') ? `<a class="link" href="https://www.registrorural.com.br/car/item/${encodeURIComponent(f.car)}" target="_blank" rel="noopener">Consultar o CAR no Registro Rural ↗</a>` : ''}
             </div>
@@ -594,6 +598,21 @@ function renderPrograma(pg) {
 // ---------- próximos vencimentos ----------
 // Regras de cor: vencido sem providência = vermelho; vencido com providência em andamento = laranja;
 // vence em até 90 dias = amarelo; mais de 90 dias = verde.
+function renderPendencias() {
+    const card = document.getElementById('cardPendencias');
+    if (!card || !dadosGerais.painel_pendencias) return;
+    const lista = fazendas.map(f => ({ f, p: f.adequacoes.filter(a => a.status === 'Pendente') })).filter(x => x.p.length)
+        .sort((a, b) => b.p.length - a.p.length);
+    if (!lista.length) return;
+    card.hidden = false;
+    const total = lista.reduce((n, x) => n + x.p.length, 0);
+    card.innerHTML = `<h2>Pendências por granja</h2>
+        <p class="hint">${total} pendências em ${lista.length} granjas. Clique no nome para ver no mapa.</p>
+        ${lista.map(x => `<div class="pend-grupo">
+            <button type="button" class="pend-titulo" data-id="${esc(x.f.id)}"><span class="swatch" style="background:${x.f.cor}"></span>${esc(x.f.nome)}<span class="pend-badge">⚠ ${x.p.length}</span></button>
+            <ul>${x.p.map(a => `<li>${esc(a.item || a.nome)}</li>`).join('')}</ul></div>`).join('')}`;
+    card.querySelectorAll('.pend-titulo').forEach(b => b.addEventListener('click', () => selecionarFazenda(b.dataset.id, true)));
+}
 function renderPrazos(prazos) {
     const card = document.getElementById('cardPrazos');
     if (!prazos || !prazos.length) return;
@@ -741,7 +760,7 @@ function adicionarCamadas() {
                 type: 'FeatureCollection',
                 features: fazendas.filter(f => geojsons[f.id] && !ehPonto(f.id)).map(f => ({
                     type: 'Feature',
-                    properties: { nome: f.nome.replace('Fazenda ', ''), ...(dadosGerais.filtro_etapa ? { [dadosGerais.filtro_etapa.campo]: f[dadosGerais.filtro_etapa.campo] } : {}) },
+                    properties: { nome: f.nome.replace('Fazenda ', '') + (dadosGerais.rotulo_pendencias && contarStatus(f.adequacoes)['Pendente'] ? `\n⚠ ${contarStatus(f.adequacoes)['Pendente']} pendência${contarStatus(f.adequacoes)['Pendente'] > 1 ? 's' : ''}` : ''), ...(dadosGerais.filtro_etapa ? { [dadosGerais.filtro_etapa.campo]: f[dadosGerais.filtro_etapa.campo] } : {}) },
                     geometry: turf.pointOnFeature(geojsons[f.id]).geometry
                 }))
             }
@@ -803,6 +822,7 @@ function popupHtml(f) {
         ${f.adequacoes.length ? `<p><strong>Adequações:</strong> ${f.adequacoes.length}
            (${cont['Concluída']} concluídas, ${cont['Em andamento']} em andamento, ${cont['Pendente']} pendentes)</p>
         <div class="mini-progress">${barraProgresso(cont, f.adequacoes.length)}</div>` : ''}
+        ${cont['Pendente'] ? `<div class="pend-box"><strong>⚠ Pendências</strong><ul>${f.adequacoes.filter(a => a.status === 'Pendente').map(a => `<li>${esc(a.item || a.nome)}</li>`).join('')}</ul></div>` : ''}
         ${documentosDa(f).map(d => `<button type="button" class="doc-btn" onclick="abrirDocumento('${esc(d.titulo)}', '${esc(d.arquivo)}')">📄 ${esc(d.titulo)}</button>`).join('')}
         <button type="button" class="btn btn-mini ver-ficha" data-fazenda="${esc(f.id)}">Ver ficha completa no painel</button>
     </div>`;
@@ -954,10 +974,13 @@ async function iniciar() {
     }
     renderFazendas();
     renderLegenda();
+    renderPendencias();
     renderPrazos(dados.prazos);
     prepararCartoes();
-    const pronto = () => { adicionarCamadas(); enquadrarTodas(); };
-    if (map.isStyleLoaded()) pronto(); else map.once('load', pronto);
+    let feito = false;
+    const pronto = () => { if (feito || !map.style || !map.style._loaded) return; feito = true; adicionarCamadas(); enquadrarTodas(); };
+    // o evento 'load' pode já ter ocorrido durante o carregamento dos dados: tenta agora e nos próximos eventos
+    pronto(); map.once('load', pronto); map.on('idle', pronto); map.on('styledata', pronto);
 }
 iniciar();
 

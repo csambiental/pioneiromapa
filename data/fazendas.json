@@ -644,5 +644,7 @@
    "fonte": "ANA/SNIRH – unidades estaduais de gestão",
    "clicavel": true
   }
- ]
+ ],
+ "painel_pendencias": true,
+ "rotulo_pendencias": true
 }
