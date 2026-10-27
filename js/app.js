@@ -760,14 +760,17 @@ function adicionarCamadas() {
                 type: 'FeatureCollection',
                 features: fazendas.filter(f => geojsons[f.id] && !ehPonto(f.id)).map(f => ({
                     type: 'Feature',
-                    properties: { nome: f.nome.replace('Fazenda ', '') + (dadosGerais.rotulo_pendencias && contarStatus(f.adequacoes)['Pendente'] ? `\n⚠ ${contarStatus(f.adequacoes)['Pendente']} pendência${contarStatus(f.adequacoes)['Pendente'] > 1 ? 's' : ''}` : ''), ...(dadosGerais.filtro_etapa ? { [dadosGerais.filtro_etapa.campo]: f[dadosGerais.filtro_etapa.campo] } : {}) },
+                    properties: { nome: (dadosGerais.rotulo_campo_info && f.info?.[dadosGerais.rotulo_campo_info] ? f.info[dadosGerais.rotulo_campo_info] : f.nome.replace('Fazenda ', '')) + (dadosGerais.rotulo_pendencias && contarStatus(f.adequacoes)['Pendente'] ? `\n⚠ ${contarStatus(f.adequacoes)['Pendente']} pendência${contarStatus(f.adequacoes)['Pendente'] > 1 ? 's' : ''}` : ''), ...(dadosGerais.filtro_etapa ? { [dadosGerais.filtro_etapa.campo]: f[dadosGerais.filtro_etapa.campo] } : {}) },
                     geometry: turf.pointOnFeature(geojsons[f.id]).geometry
                 }))
             }
         });
         map.addLayer({
             id: 'rotulos', type: 'symbol', source: 'rotulos', minzoom: fazendas.length > 8 ? 12 : 0,
-            layout: { 'text-field': ['get', 'nome'], 'text-size': 13, 'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'], 'text-max-width': 10 },
+            layout: { 'text-field': ['get', 'nome'], 'text-size': 13, 'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'], 'text-max-width': 10,
+                      // nomes de granjas vizinhas não se escondem: deslocam-se para o lado livre
+                      'text-variable-anchor': ['center', 'top', 'bottom', 'left', 'right', 'top-left', 'top-right', 'bottom-left', 'bottom-right'],
+                      'text-radial-offset': 0.6, 'text-justify': 'auto', 'symbol-sort-key': 0 },
             paint: { 'text-color': '#ffffff', 'text-halo-color': '#000000', 'text-halo-width': 1.5 }
         });
     } catch (err) {
