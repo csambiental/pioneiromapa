@@ -1,0 +1,403 @@
+{
+ "cliente": {
+  "nome": "Frangos Pioneiro – Granjas integradas",
+  "subtitulo": "Mapeamento da produção avícola no Norte Pioneiro · CS Consultoria Ambiental",
+  "selo": "Em construção"
+ },
+ "atualizado_em": "2026-10-27",
+ "resumo": [
+  {
+   "valor": "5",
+   "rotulo": "granjas mapeadas"
+  },
+  {
+   "valor": "44,6",
+   "rotulo": "hectares (CAR)"
+  },
+  {
+   "valor": "416 mil",
+   "rotulo": "aves alojadas por lote"
+  }
+ ],
+ "lista_titulo": "Granjas integradas",
+ "agrupar_por": {
+  "campo": "situacao",
+  "titulo": "Situação ambiental das granjas",
+  "cores": {
+   "Pendência crítica": "#e53935",
+   "Pendências a verificar": "#fb8c00",
+   "Regular – ajustes documentais": "#43a047"
+  }
+ },
+ "fazendas": [
+  {
+   "id": "G01",
+   "nome": "Sítio São Benedito",
+   "car": "PR-4128500-4946.0DA2.F5B7.41B5.BD05.059C.3569.AB58",
+   "situacao": "Pendência crítica",
+   "area_ha": 18.8741,
+   "municipio_mapa": "Wenceslau Braz",
+   "info": {
+    "Município": "Wenceslau Braz – PR (bacia do Itararé)",
+    "Atividade": "Avicultura – frango de corte (integração Frangos Pioneiro)",
+    "Alojamento": "69.000 aves (declaração de uso da água)",
+    "Área do imóvel (CAR)": "18,87 ha · 1,05 módulo fiscal",
+    "Situação do CAR": "Aguardando análise (inscrito em 2015, retificado em 2026)",
+    "Área na matrícula": "18,23 ha (diferença de 0,64 ha para o CAR)",
+    "Licença ambiental": "RLAS nº 383652-R2 – válida até 21/08/2032",
+    "Água": "Poço tubular de 150 m (Aquífero Itararé) – DUIO 12509/2022 vencida em 22/06/2025"
+   },
+   "documentos": [],
+   "adequacoes": [
+    {
+     "nome": "Licença ambiental (RLAS 383652-R2) válida até 21/08/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Renovar a dispensa de outorga do poço (DUIO 12509/2022 venceu em 22/06/2025)",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Compatibilizar a vazão do poço: licença informa 1,27 m³/h e a DUIO 0,68 m³/h",
+     "status": "Pendente"
+    },
+    {
+     "nome": "CAR aguardando análise do IAT",
+     "status": "Em andamento"
+    },
+    {
+     "nome": "Conferir no CAR o uso do solo, APP e Reserva Legal (recibo de 2015 está zerado)",
+     "status": "Pendente"
+    }
+   ],
+   "pontos": [
+    {
+     "nome": "Aviário (ponto da licença)",
+     "coord": [
+      -49.726471,
+      -23.808755
+     ],
+     "descricao": "Coordenada do empreendimento na licença RLAS 383652-R2"
+    },
+    {
+     "nome": "Poço tubular",
+     "coord": [
+      -49.723906,
+      -23.805994
+     ],
+     "descricao": "Poço 1 – 150 m, Aquífero Itararé Indiviso · DUIO 12509/2022 (vencida)"
+    }
+   ],
+   "arquivo": "data/propriedades/G01.geojson"
+  },
+  {
+   "id": "G02",
+   "nome": "Sítio Bom Pastor / Sítio Rodriguez",
+   "car": "PR-4109708-E2AF.CF4F.2AD0.4914.BC00.F046.9260.3D27",
+   "situacao": "Pendências a verificar",
+   "area_ha": 8.4577,
+   "municipio_mapa": "Ibaiti",
+   "info": {
+    "Município": "Ibaiti – PR (bacia do Cinzas)",
+    "Atividade": "Avicultura – frango de corte (integração Frangos Pioneiro)",
+    "Alojamento": "74.360 aves/lote (licença) · 30.000 aves (declaração de uso da água)",
+    "Área do imóvel (CAR)": "8,46 ha no SICAR · recibo de 2019 traz 6,07 ha (CAR retificado em 2026)",
+    "Situação do CAR": "Aguardando análise",
+    "Licença ambiental": "LAC nº 372424 – válida até 08/04/2028 (empreendimento “Sítio Rodriguez”)",
+    "Água": "Poço tubular – DUIO 11103/2026, válida até 18/02/2032"
+   },
+   "documentos": [],
+   "adequacoes": [
+    {
+     "nome": "Licença ambiental (LAC 372424) válida até 08/04/2028",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Dispensa de outorga (DUIO 11103/2026) válida até 18/02/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Verificar o poço: coordenada da DUIO fica a 3,3 km do aviário, fora do imóvel",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Compatibilizar a lotação: licença 74.360 aves/lote × DUIO 30.000 aves",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Uniformizar o nome do imóvel (CAR: Sítio Bom Pastor · licença: Sítio Rodriguez)",
+     "status": "Pendente"
+    },
+    {
+     "nome": "Atualizar o recibo do CAR na pasta (2019, 6,07 ha) – CAR retificado com 8,46 ha aguarda análise",
+     "status": "Em andamento"
+    }
+   ],
+   "pontos": [
+    {
+     "nome": "Aviário (ponto da licença)",
+     "coord": [
+      -50.177742,
+      -23.887856
+     ],
+     "descricao": "Coordenada do empreendimento na LAC 372424"
+    },
+    {
+     "nome": "Poço tubular (DUIO)",
+     "coord": [
+      -50.195935,
+      -23.915654
+     ],
+     "descricao": "DUIO 11103/2026 – ponto a 3,3 km do aviário, fora do imóvel: conferir"
+    }
+   ],
+   "arquivo": "data/propriedades/G02.geojson"
+  },
+  {
+   "id": "G03",
+   "nome": "Fazenda Santa Maria – Lote 01 C",
+   "car": "PR-4109708-13D4.C618.39A0.4836.8A06.AD33.523B.ACD2",
+   "situacao": "Pendências a verificar",
+   "area_ha": 5.2023,
+   "municipio_mapa": "Ibaiti",
+   "info": {
+    "Município": "Ibaiti – PR (bacia do Cinzas)",
+    "Empreendimento": "Sítio Pozzan 02 (vizinho ao Lote 01 A)",
+    "Atividade": "Avicultura – frango de corte (integração Frangos Pioneiro)",
+    "Alojamento": "115.200 aves/lote",
+    "Área do imóvel (CAR)": "5,20 ha · 0,29 módulo fiscal · 5,09 ha consolidados, sem vegetação nativa declarada",
+    "Matrícula": "22.026 – 5,2067 ha",
+    "Situação do CAR": "Aguardando análise (inscrito em 2026)",
+    "Licença ambiental": "LAS nº 386770 – válida até 25/09/2031",
+    "Água": "Captação superficial compartilhada com o Lote 01 A – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032"
+   },
+   "documentos": [],
+   "adequacoes": [
+    {
+     "nome": "Licença ambiental (LAS 386770) válida até 25/09/2031",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Dispensa de outorga da captação superficial (DUIO 16682/2026) válida até 11/08/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Verificar a fonte de água: a licença cita poço profundo (0,49 m³/h) sem outorga; a DUIO é de captação superficial a 160 m, fora do lote",
+     "status": "Pendente"
+    },
+    {
+     "nome": "CAR aguardando análise do IAT",
+     "status": "Em andamento"
+    }
+   ],
+   "pontos": [
+    {
+     "nome": "Aviário Lote 01 C (licença)",
+     "coord": [
+      -50.206953,
+      -23.698162
+     ],
+     "descricao": "Coordenada do empreendimento na LAS 386770"
+    },
+    {
+     "nome": "Poço citado na licença",
+     "coord": [
+      -50.20856,
+      -23.700248
+     ],
+     "descricao": "Poço profundo informado na LAS 386770 – sem outorga ou dispensa na pasta"
+    },
+    {
+     "nome": "Captação superficial (DUIO)",
+     "coord": [
+      -50.204221,
+      -23.697685
+     ],
+     "descricao": "DUIO 16682/2026 – compartilhada pelos Lotes 01 A e 01 C; fica fora dos dois lotes"
+    }
+   ],
+   "arquivo": "data/propriedades/G03.geojson"
+  },
+  {
+   "id": "G04",
+   "nome": "Fazenda Santa Maria – Lote 01 A",
+   "car": "PR-4109708-1410.08E9.2292.46CC.B751.C629.CF65.69D4",
+   "situacao": "Pendências a verificar",
+   "area_ha": 6.2372,
+   "municipio_mapa": "Ibaiti",
+   "info": {
+    "Município": "Ibaiti – PR (bacia do Cinzas)",
+    "Empreendimento": "Sítio Pozzan 02 (vizinho ao Lote 01 C)",
+    "Atividade": "Avicultura – frango de corte (integração Frangos Pioneiro)",
+    "Alojamento": "115.200 aves/lote",
+    "Área do imóvel (CAR)": "6,24 ha · 0,35 módulo fiscal · 6,10 ha consolidados, sem vegetação nativa declarada",
+    "Matrícula": "22.024 – 6,2428 ha",
+    "Situação do CAR": "Aguardando análise (inscrito em 2026)",
+    "Licença ambiental": "LAS nº 386771 – válida até 25/09/2031",
+    "Água": "Captação superficial compartilhada com o Lote 01 C – DUIO 16682/2026, válida até 11/08/2032"
+   },
+   "documentos": [],
+   "adequacoes": [
+    {
+     "nome": "Licença ambiental (LAS 386771) válida até 25/09/2031",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Dispensa de outorga da captação superficial (DUIO 16682/2026) válida até 11/08/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Verificar a fonte de água: a licença cita poço profundo (0,49 m³/h) sem outorga; a DUIO é de captação superficial a 265 m, fora do lote",
+     "status": "Pendente"
+    },
+    {
+     "nome": "CAR aguardando análise do IAT",
+     "status": "Em andamento"
+    }
+   ],
+   "pontos": [
+    {
+     "nome": "Aviário Lote 01 A (licença)",
+     "coord": [
+      -50.20859,
+      -23.698725
+     ],
+     "descricao": "Coordenada do empreendimento na LAS 386771"
+    },
+    {
+     "nome": "Poço citado na licença",
+     "coord": [
+      -50.209264,
+      -23.699548
+     ],
+     "descricao": "Poço profundo informado na LAS 386771 – sem outorga ou dispensa na pasta"
+    }
+   ],
+   "arquivo": "data/propriedades/G04.geojson"
+  },
+  {
+   "id": "G05",
+   "nome": "Chácara Vilela",
+   "car": "PR-4112801-9909.EF3F.019B.4641.8EE2.2313.A623.8908",
+   "situacao": "Regular – ajustes documentais",
+   "area_ha": 5.8757,
+   "municipio_mapa": "Joaquim Távora",
+   "info": {
+    "Município": "Joaquim Távora – PR (bacia do Cinzas)",
+    "Atividade": "Avicultura – frango de corte (integração Frangos Pioneiro)",
+    "Alojamento": "42.240 aves/lote",
+    "Área do imóvel (CAR)": "5,88 ha no SICAR · recibo de 2015 traz 2,81 ha",
+    "Situação do CAR": "Analisado, em conformidade com a Lei 12.651/2012",
+    "Licença ambiental": "LAC nº 379544 – válida até 02/07/2028",
+    "Água": "Poço raso – DUIO 15365/2026, válida até 01/07/2032"
+   },
+   "documentos": [],
+   "adequacoes": [
+    {
+     "nome": "Licença ambiental (LAC 379544) válida até 02/07/2028",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Dispensa de outorga (DUIO 15365/2026) válida até 01/07/2032",
+     "status": "Concluída"
+    },
+    {
+     "nome": "CAR analisado e em conformidade",
+     "status": "Concluída"
+    },
+    {
+     "nome": "Atualizar na pasta o recibo do CAR (2015, 2,81 ha) pelo recibo atual (5,88 ha)",
+     "status": "Pendente"
+    }
+   ],
+   "pontos": [
+    {
+     "nome": "Aviário (ponto da licença)",
+     "coord": [
+      -49.943693,
+      -23.487601
+     ],
+     "descricao": "Coordenada do empreendimento na LAC 379544"
+    },
+    {
+     "nome": "Poço raso",
+     "coord": [
+      -49.94321,
+      -23.488483
+     ],
+     "descricao": "DUIO 15365/2026"
+    }
+   ],
+   "arquivo": "data/propriedades/G05.geojson"
+  }
+ ],
+ "prazos": [
+  {
+   "data": "2025-06-22",
+   "titulo": "Sítio São Benedito – dispensa de outorga do poço (DUIO 12509/2022)"
+  },
+  {
+   "data": "2032-08-21",
+   "titulo": "Sítio São Benedito – licença ambiental RLAS 383652-R2"
+  },
+  {
+   "data": "2028-04-08",
+   "titulo": "Sítio Rodriguez – licença LAC 372424"
+  },
+  {
+   "data": "2032-02-18",
+   "titulo": "Sítio Bom Pastor – dispensa de outorga DUIO 11103/2026"
+  },
+  {
+   "data": "2031-09-25",
+   "titulo": "Fazenda Santa Maria Lote 01 C – licença LAS 386770"
+  },
+  {
+   "data": "2032-08-11",
+   "titulo": "Fazenda Santa Maria (Lotes 01 A e 01 C) – dispensa de outorga DUIO 16682/2026"
+  },
+  {
+   "data": "2031-09-25",
+   "titulo": "Fazenda Santa Maria Lote 01 A – licença LAS 386771"
+  },
+  {
+   "data": "2028-07-02",
+   "titulo": "Chácara Vilela – licença LAC 379544"
+  },
+  {
+   "data": "2032-07-01",
+   "titulo": "Chácara Vilela – dispensa de outorga DUIO 15365/2026"
+  }
+ ],
+ "camadas": [],
+ "programa": {
+  "titulo": "O projeto",
+  "texto": "Mapeamento das granjas integradas à Frangos Pioneiro (Projeto Pioneiros – CS 38170): perímetro do CAR, aviários, pontos de captação de água, licenças ambientais e dispensas de outorga do IAT, com a lista do que falta regularizar em cada granja. As informações vêm dos documentos dos produtores e das bases públicas do SICAR.",
+  "etapas": [
+   {
+    "nome": "Etapa 1",
+    "texto": "– 5 granjas organizadas (Ibaiti, Joaquim Távora e Wenceslau Braz): CAR, licença, água e pendências (concluída)"
+   },
+   {
+    "nome": "Etapa 2",
+    "texto": "– novas granjas integradas, alertas de desmatamento (MapBiomas) e APP/hidrografia por granja",
+    "classe": "andamento"
+   }
+  ]
+ },
+ "camadas_opcionais": [
+  {
+   "id": "bacias",
+   "nome": "Bacias hidrográficas (PR)",
+   "arquivo": "data/bacias/bacias_parana.geojson",
+   "cor": "#29b6f6",
+   "largura": 2.6,
+   "halo": true,
+   "preenchimento": 0.05,
+   "rotulo_campo": "nome",
+   "rotulo_tamanho": 13,
+   "fonte": "ANA/SNIRH – unidades estaduais de gestão",
+   "clicavel": true
+  }
+ ]
+}
