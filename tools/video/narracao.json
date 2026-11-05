@@ -1,0 +1,16 @@
+{
+ "intro": "Olá! Neste vídeo vamos mostrar como usar o mapa interativo das granjas integradas da Frangos Pioneiro, desenvolvido pela CS Consultoria Ambiental.",
+ "geral": "Na tela inicial, todas as granjas aparecem sobre a imagem de satélite mais recente. Cada contorno é o perímetro oficial do Cadastro Ambiental Rural.",
+ "resumo": "No resumo, você acompanha o número de granjas, a área total, as aves alojadas por lote e o andamento geral das adequações.",
+ "pendencias": "O quadro de pendências por granja lista o que falta regularizar em cada produtor, começando por quem tem mais pendências.",
+ "clique_produtor": "Clique no nome do produtor e o mapa vai direto até a granja, abrindo a ficha completa.",
+ "ficha": "Na ficha, as pendências aparecem em vermelho logo no início. Abaixo, estão os dados da licença, da água, do CAR, da matrícula, e a lista de todas as adequações.",
+ "documentos": "Os documentos de cada granja, como o recibo do CAR, a licença ambiental e a dispensa de outorga, abrem aqui mesmo, com os dados pessoais protegidos.",
+ "documento_aberto": "Também é possível abrir o documento em uma nova aba, ou baixar o arquivo.",
+ "vizinhas": "Aqui estão as granjas vizinhas da Fazenda Santa Maria, lotes um A e um C.",
+ "contorno": "Ao clicar no contorno, abre um resumo com o andamento, as pendências e os documentos da granja.",
+ "pontos": "Os pontos brancos mostram os aviários e as captações de água, com as coordenadas tiradas das licenças e das outorgas.",
+ "vencimentos": "Em próximos vencimentos, ficam as licenças, outorgas e condicionantes com prazo. Os vencidos aparecem em vermelho.",
+ "camadas": "Por fim, você pode ligar camadas, como as bacias hidrográficas, e alternar entre a imagem de satélite e o mapa de ruas.",
+ "fim": "Esse é o mapa das granjas integradas. CS Consultoria Ambiental, Projeto Pioneiros."
+}
