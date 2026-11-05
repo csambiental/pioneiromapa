@@ -1,0 +1,21 @@
+name: Gravar vídeo tutorial
+on: { workflow_dispatch: {} }
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          pip install -q playwright pymupdf
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y -qq ffmpeg fonts-noto
+      - run: |
+          python3 -m http.server 8765 >/dev/null 2>&1 &
+          sleep 2
+          python3 tools/video/gravar_tutorial.py http://localhost:8765 /tmp/vid
+          f=$(ls /tmp/vid/*.webm | head -1)
+          ffmpeg -v error -y -ss 1.8 -i "$f" -r 30 -c:v libx264 -crf 21 -preset medium -pix_fmt yuv420p -movflags +faststart tutorial_pioneiros.mp4
+          ls -la tutorial_pioneiros.mp4
+      - uses: actions/upload-artifact@v4
+        with: { name: tutorial, path: tutorial_pioneiros.mp4, retention-days: 30 }
