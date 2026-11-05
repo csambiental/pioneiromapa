@@ -1,5 +1,6 @@
 name: Gravar vídeo tutorial
 on: { workflow_dispatch: {} }
+permissions: { contents: write }
 jobs:
   video:
     runs-on: ubuntu-latest
@@ -17,5 +18,7 @@ jobs:
           f=$(ls /tmp/vid/*.webm | head -1)
           ffmpeg -v error -y -ss 1.8 -i "$f" -r 30 -c:v libx264 -crf 21 -preset medium -pix_fmt yuv420p -movflags +faststart tutorial_pioneiros.mp4
           ls -la tutorial_pioneiros.mp4
-      - uses: actions/upload-artifact@v4
-        with: { name: tutorial, path: tutorial_pioneiros.mp4, retention-days: 30 }
+      - run: |
+          mkdir -p tutorial && mv tutorial_pioneiros.mp4 tutorial/
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tutorial; git commit -q -m "Vídeo tutorial atualizado" || true; git pull -q --rebase origin main || true; git push
