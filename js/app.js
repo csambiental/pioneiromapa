@@ -954,6 +954,7 @@ async function iniciar() {
     camadas = dados.camadas || [];
     window.camadasExtras = camadas.map(c => `cam-${c.id}`);
     window.camadasCfg = camadas;
+    camadas.filter(c => c.oculta).forEach(c => ocultas.add(c.id));  // camadas que começam desligadas
     await Promise.all(camadas.map(async c => {
         try { camadasData[c.id] = await (await fetch(c.arquivo, { cache: 'no-cache' })).json(); }
         catch (err) { console.error(`Não foi possível carregar ${c.arquivo}`, err); }
