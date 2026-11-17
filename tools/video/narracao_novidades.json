@@ -1,0 +1,15 @@
+{
+ "intro": "Olá! Este vídeo apresenta as novidades do mapa das granjas integradas da Frangos Pioneiro. Agora, cada granja recebe uma análise ambiental automática, feita pela CS Consultoria Ambiental.",
+ "granja": "Como exemplo, vamos usar a Chácara Vilela, do produtor Reginaldo Vilela, em Joaquim Távora. Clicando no nome, o mapa vai até a granja e abre a ficha.",
+ "ficha": "Na ficha continuam as pendências, os dados da licença, da água e do CAR, e os documentos da granja.",
+ "analise": "E agora aparece também a análise automática: o percentual de vegetação nativa, a área de agricultura, a situação no SIGEF e a área de preservação permanente estimada.",
+ "app": "No mapa, a área em vermelho é a APP estimada, calculada a partir dos rios e nascentes mapeados pela FBDS, com as faixas do Código Florestal.",
+ "rios": "Os rios e córregos aparecem em azul, num raio de trezentos metros da granja, e as nascentes em azul-claro.",
+ "outorgas": "Os pontos coloridos são as outorgas de água no entorno de um quilômetro. Clicando em um deles, você vê o tipo de uso, a vazão, a validade e a distância até a granja.",
+ "licencas": "No quadro de camadas, dá para ligar as licenças ambientais da vizinhança e os imóveis vizinhos do CAR, para entender o contexto da região.",
+ "raiox_botao": "Para ir além, a ficha traz o botão do Raio-X automático do imóvel.",
+ "raiox": "O Raio-X cruza o imóvel com todas as camadas ambientais do município: uso do solo, relevo, água, licenças, alertas de desmatamento e embargos. E aponta as pendências e as adequações recomendadas.",
+ "itr": "Ele também calcula uma prévia do ITR por imagem de satélite, e gera um relatório completo em PDF, pronto para enviar ao produtor.",
+ "volta": "Essas informações já estão disponíveis para todas as granjas do projeto, em Joaquim Távora, Ibaiti e Wenceslau Braz.",
+ "fim": "Mapa das granjas integradas Frangos Pioneiro. CS Consultoria Ambiental, Projeto Pioneiros."
+}

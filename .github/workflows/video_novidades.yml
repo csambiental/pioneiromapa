@@ -1,0 +1,29 @@
+name: Gravar vídeo de novidades
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  video:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          pip install -q playwright piper-tts numpy
+          python -m playwright install chromium
+          curl -sL https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz | tar -xJ -C /tmp
+          sudo cp /tmp/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/ && ffmpeg -version | head -1
+          mkdir -p /tmp/voz && cd /tmp/voz
+          V=https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium
+          curl -sL -o voz.onnx $V/pt_BR-faber-medium.onnx && curl -sL -o voz.onnx.json $V/pt_BR-faber-medium.onnx.json
+      - run: VELOCIDADE=1.0 python3 tools/video/narrar.py tools/video/narracao_novidades.json /tmp/voz/voz.onnx /tmp/falas
+      - run: |
+          python3 -m http.server 8765 >/dev/null 2>&1 &
+          sleep 2
+          python3 tools/video/gravar_novidades.py http://localhost:8765 /tmp/vid /tmp/falas/duracoes.json
+          python3 tools/video/trilha.py 300 /tmp/trilha.wav
+          mkdir -p tutorial
+          python3 tools/video/montar_com_trilha.py "$(ls /tmp/vid/*.webm | head -1)" /tmp/vid/marcas.json /tmp/falas /tmp/trilha.wav tutorial/novidades_pioneiros.mp4
+          ls -la tutorial
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tutorial; git commit -q -m "Vídeo de novidades" || true; git pull -q --rebase origin main || true; git push

@@ -385,6 +385,8 @@ function renderFazendas() {
 // ---------- visualizador de documentos ----------
 const docDialog = document.getElementById('docDialog');
 function abrirDocumento(titulo, arquivo, opcoes = {}) {
+    // páginas externas (ex.: Raio-X da Análise Rural) abrem em nova aba; PDFs e painéis continuam na janela do mapa
+    if (/^https?:/i.test(arquivo) && !/\.pdf($|\?)/i.test(arquivo) && !opcoes.embed) { window.open(arquivo, '_blank', 'noopener'); return; }
     document.getElementById('docTitle').textContent = titulo;
     document.getElementById('docFrame').src = opcoes.embed || arquivo;
     document.getElementById('docOpen').href = arquivo;
