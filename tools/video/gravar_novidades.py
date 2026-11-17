@@ -81,20 +81,23 @@ with sync_playwright() as p:
     clicar('#cardPendencias .pend-titulo[data-id="G05"]') if pg.query_selector('#cardPendencias .pend-titulo[data-id="G05"]') else pg.evaluate("()=>selecionarFazenda('G05', true)")
     esp(1)
     foco('.farm.open .pend-box'); esp = fala('ficha'); cap('Ficha da granja', 'Pendências, licença, água, CAR e documentos', '2 / 6'); pg.wait_for_timeout(3500); foco('.farm.open dl'); esp()
-    foco_texto('.farm.open dt', 'Análise automática'); esp = fala('analise')
+    foco_texto('.farm.open dt', '(análise CS)'); esp = fala('analise')
     cap('Análise automática da granja', 'Vegetação nativa, agricultura, SIGEF e APP estimada – calculadas pela CS', '2 / 6', True); esp(0.5)
     foco('x', False)
 
     # ---------- camadas no mapa ----------
     c5 = pg.evaluate("()=>turf.centroid(geojsons['G05']).geometry.coordinates")
-    pg.evaluate("c=>map.flyTo({center:c,zoom:15.8,duration:2500})", c5)
-    esp = fala('app'); cap('APP estimada (em vermelho)', 'Rios e nascentes da FBDS com as faixas do Código Florestal', '3 / 6', True); esp(0.5)
-    pg.evaluate("c=>map.flyTo({center:c,zoom:15.0,duration:2000})", c5)
+    c2 = pg.evaluate("()=>turf.centroid((camadasData['an-app'].features.find(f=>f.properties.id==='G02')||{geometry:geojsons['G02'].features[0].geometry})).geometry.coordinates")
+    pg.evaluate("c=>map.flyTo({center:c,zoom:16.2,duration:3000})", c2)
+    esp = fala('app'); cap('APP estimada (em vermelho) – exemplo de granja em Ibaiti', 'Nascentes e rios da FBDS com as faixas do Código Florestal', '3 / 6', True); esp(0.5)
+    pg.evaluate("c=>map.flyTo({center:c,zoom:15.2,duration:3000})", c5); pg.wait_for_timeout(3000)
     esp = fala('rios'); cap('Rios, córregos e nascentes no entorno', 'Raio de 300 m da granja', '3 / 6', True); esp()
     pg.evaluate("c=>map.flyTo({center:c,zoom:13.9,duration:2000})", c5); pg.wait_for_timeout(2300)
     esp = fala('outorgas'); cap('Outorgas de água no entorno de 1 km', 'Clique no ponto: uso, vazão, validade e distância até a granja', '4 / 6', True)
     pt = pg.evaluate("""()=>{const fs=(camadasData['an-outorgas']||{features:[]}).features.filter(f=>f.properties.id==='G05');
-        fs.sort((a,b)=>parseFloat(a.properties['Distância da propriedade'])-parseFloat(b.properties['Distância da propriedade'])); return fs.length?fs[0].geometry.coordinates:null}""")
+        fs.sort((a,b)=>parseFloat(a.properties['Distância da propriedade'])-parseFloat(b.properties['Distância da propriedade']));
+        const proprios=fazendas.find(x=>x.id==='G05').pontos.map(p=>p.coord); const longe=fs.filter(f=>proprios.every(c=>Math.hypot((c[0]-f.geometry.coordinates[0])*102000,(c[1]-f.geometry.coordinates[1])*110600)>150));
+        if(longe.length) return longe[0].geometry.coordinates; return fs.length?fs[0].geometry.coordinates:null}""")
     pg.wait_for_timeout(1500)
     if pt:
         xy = tela_mapa(*pt); cursor_em(xy); pg.mouse.click(*xy)

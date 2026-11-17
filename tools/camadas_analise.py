@@ -86,12 +86,12 @@ for f in cfg['fazendas']:
     link = f"https://csambiental.github.io/territoriogeo/analise/?m={cod}&car={f['car'].replace('.', '')}"
     docs = [d for d in f.get('documentos', []) if 'Raio-X' not in d.get('titulo', '')]
     f['documentos'] = docs + [{'titulo': 'Raio-X automático do imóvel (Análise Rural CS)', 'arquivo': link}]
-    info = {k: v for k, v in f['info'].items() if not k.startswith('Análise automática')}
+    info = {k: v for k, v in f['info'].items() if not k.startswith('Análise automática') and not k.endswith('(análise CS)')}
     if car_prop:
-        info['Análise automática – vegetação nativa'] = f"{str(round(car_prop.get('veg_nativa_pct') or 0, 1)).replace('.', ',')}% do imóvel ({car_prop.get('faixa_veg', '')})"
-        if car_prop.get('Uso do solo 2023 – Agricultura (%)'): info['Análise automática – agricultura'] = car_prop['Uso do solo 2023 – Agricultura (%)'] + '% do imóvel (2023)'
-        info['Análise automática – SIGEF'] = car_prop.get('Georreferenciamento SIGEF', '')
-    info['Análise automática – APP estimada'] = f"{app_ha:.2f} ha ({len(rios)} trecho(s) de rio e {len(nasc)} nascente(s) no entorno de 300 m)".replace('.', ',', 1)
+        info['Vegetação nativa (análise CS)'] = f"{str(round(car_prop.get('veg_nativa_pct') or 0, 1)).replace('.', ',')}% do imóvel ({car_prop.get('faixa_veg', '')})"
+        if car_prop.get('Uso do solo 2023 – Agricultura (%)'): info['Agricultura (análise CS)'] = car_prop['Uso do solo 2023 – Agricultura (%)'] + '% do imóvel (2023)'
+        info['SIGEF (análise CS)'] = car_prop.get('Georreferenciamento SIGEF', '')
+    info['APP estimada (análise CS)'] = f"{app_ha:.2f} ha ({len(rios)} trecho(s) de rio e {len(nasc)} nascente(s) no entorno de 300 m)".replace('.', ',', 1)
     f['info'] = info
     resumo.append((f['id'], cod, len(rios), len(nasc), round(app_ha, 2), car_prop is not None))
 
@@ -99,8 +99,8 @@ for k, v in saida.items():
     json.dump({'type': 'FeatureCollection', 'features': v}, open(f'{OUT}/{k}.geojson', 'w'), ensure_ascii=False, separators=(',', ':'))
 
 CAM = [
-    {'id': 'an-app', 'nome': 'APP estimada (faixa legal)', 'arquivo': f'{OUT}/app.geojson', 'tipo': 'fill', 'cor': '#e53935', 'opacidade': 0.35, 'rotulo': False, 'campos': ['propriedade', 'Área (ha)', 'Critério']},
-    {'id': 'an-rios', 'nome': 'Rios e córregos (FBDS)', 'arquivo': f'{OUT}/rios.geojson', 'tipo': 'line', 'cor': '#29b6f6', 'rotulo': False},
+    {'id': 'an-app', 'nome': 'APP estimada (faixa legal)', 'arquivo': f'{OUT}/app.geojson', 'tipo': 'fill', 'cor': '#ff1744', 'opacidade': 0.55, 'rotulo': False, 'campos': ['propriedade', 'Área (ha)', 'Critério']},
+    {'id': 'an-rios', 'nome': 'Rios e córregos (FBDS)', 'arquivo': f'{OUT}/rios.geojson', 'tipo': 'line', 'cor': '#4fc3f7', 'largura': 2.6, 'tracejado': False, 'rotulo': False},
     {'id': 'an-nascentes', 'nome': 'Nascentes (FBDS)', 'arquivo': f'{OUT}/nascentes.geojson', 'tipo': 'circle', 'cor': '#00e5ff', 'rotulo': False, 'campos': ['propriedade']},
     {'id': 'an-massas', 'nome': "Represas e massas d'água", 'arquivo': f'{OUT}/massas.geojson', 'tipo': 'fill', 'cor': '#1e88e5', 'opacidade': 0.5, 'rotulo': False, 'campos': ['Tipo', 'Área (ha)']},
     {'id': 'an-sigef', 'oculta': True, 'nome': 'Parcelas certificadas (SIGEF)', 'arquivo': f'{OUT}/sigef.geojson', 'tipo': 'fill', 'cor': '#ab47bc', 'opacidade': 0.15, 'rotulo': False, 'campos': ['propriedade', 'Situação', 'Certificado em', 'Área (ha)']},

@@ -707,7 +707,7 @@ function adicionarCamadas() {
             return;
         }
         if (c.tipo === 'line') {
-            map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': c.cor, 'line-width': 1.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] } });
+            map.addLayer({ id: `cam-${c.id}`, type: 'line', source: `cam-${c.id}`, paint: { 'line-color': c.cor, 'line-width': c.largura || 1.5, 'line-opacity': c.largura ? 0.95 : 0.8, ...(c.tracejado === false ? {} : { 'line-dasharray': [3, 2] }) } });
             return;
         }
         if (c.tipo === 'fill') {

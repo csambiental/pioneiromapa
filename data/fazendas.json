@@ -48,10 +48,10 @@
     "Licença ambiental": "RLAS nº 383652-R2 – válida até 21/08/2032",
     "Água": "Poço tubular de 150 m (Aquífero Itararé) – DUIO 12509/2022 vencida em 22/06/2025",
     "Matrícula": "7.679 – 18,23 ha",
-    "Análise automática – vegetação nativa": "26,7% do imóvel (20% ou mais)",
-    "Análise automática – agricultura": "51,7% do imóvel (2023)",
-    "Análise automática – SIGEF": "Não localizado no SIGEF",
-    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 2 nascente(s) no entorno de 300 m)"
+    "Vegetação nativa (análise CS)": "26,7% do imóvel (20% ou mais)",
+    "Agricultura (análise CS)": "51,7% do imóvel (2023)",
+    "SIGEF (análise CS)": "Não localizado no SIGEF",
+    "APP estimada (análise CS)": "0,00 ha (0 trecho(s) de rio e 2 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -138,9 +138,9 @@
     "Licença ambiental": "LAC nº 372424 – válida até 08/04/2028 (empreendimento “Sítio Rodriguez”)",
     "Água": "Poço tubular – DUIO 11103/2026, válida até 18/02/2032",
     "Matrícula": "15.921 – 6,05 ha (compra em 03/11/2022)",
-    "Análise automática – vegetação nativa": "75,4% do imóvel (20% ou mais)",
-    "Análise automática – SIGEF": "Não localizado no SIGEF",
-    "Análise automática – APP estimada": "0,59 ha (0 trecho(s) de rio e 4 nascente(s) no entorno de 300 m)"
+    "Vegetação nativa (análise CS)": "75,4% do imóvel (20% ou mais)",
+    "SIGEF (análise CS)": "Não localizado no SIGEF",
+    "APP estimada (análise CS)": "0,59 ha (0 trecho(s) de rio e 4 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -236,9 +236,9 @@
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386770 – válida até 25/09/2031",
     "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração",
-    "Análise automática – vegetação nativa": "0% do imóvel ()",
-    "Análise automática – SIGEF": "Certificado (≥ 50% da área)",
-    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
+    "Vegetação nativa (análise CS)": "0% do imóvel ()",
+    "SIGEF (análise CS)": "Certificado (≥ 50% da área)",
+    "APP estimada (análise CS)": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -342,10 +342,10 @@
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386771 – válida até 25/09/2031",
     "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração",
-    "Análise automática – vegetação nativa": "0% do imóvel (Menos de 5%)",
-    "Análise automática – agricultura": "100,0% do imóvel (2023)",
-    "Análise automática – SIGEF": "Certificado (≥ 50% da área)",
-    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
+    "Vegetação nativa (análise CS)": "0% do imóvel (Menos de 5%)",
+    "Agricultura (análise CS)": "100,0% do imóvel (2023)",
+    "SIGEF (análise CS)": "Certificado (≥ 50% da área)",
+    "APP estimada (análise CS)": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -436,10 +436,10 @@
     "Licença ambiental": "LAC nº 379544 – válida até 02/07/2028",
     "Água": "Poço raso – DUIO 15365/2026, válida até 01/07/2032",
     "Matrícula": "465 (2,85 ha) + 13.340 – unificadas no CCIR com 5,8757 ha",
-    "Análise automática – vegetação nativa": "15,7% do imóvel (10% a 20%)",
-    "Análise automática – agricultura": "16,7% do imóvel (2023)",
-    "Análise automática – SIGEF": "Não localizado no SIGEF",
-    "Análise automática – APP estimada": "0,02 ha (4 trecho(s) de rio e 0 nascente(s) no entorno de 300 m)"
+    "Vegetação nativa (análise CS)": "15,7% do imóvel (10% a 20%)",
+    "Agricultura (análise CS)": "16,7% do imóvel (2023)",
+    "SIGEF (análise CS)": "Não localizado no SIGEF",
+    "APP estimada (análise CS)": "0,02 ha (4 trecho(s) de rio e 0 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -658,8 +658,8 @@
    "nome": "APP estimada (faixa legal)",
    "arquivo": "data/analise/app.geojson",
    "tipo": "fill",
-   "cor": "#e53935",
-   "opacidade": 0.35,
+   "cor": "#ff1744",
+   "opacidade": 0.55,
    "rotulo": false,
    "campos": [
     "propriedade",
@@ -672,7 +672,9 @@
    "nome": "Rios e córregos (FBDS)",
    "arquivo": "data/analise/rios.geojson",
    "tipo": "line",
-   "cor": "#29b6f6",
+   "cor": "#4fc3f7",
+   "largura": 2.6,
+   "tracejado": false,
    "rotulo": false
   },
   {

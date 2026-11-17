@@ -135,13 +135,13 @@ body.panel-closed .sidebar { display: none; }
 .farm.open .farm-body { display: block; }
 .farm-body dl {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
     gap: 3px 10px;
     margin: 0 0 10px;
     font-size: .8rem;
 }
-.farm-body dt { color: var(--texto-suave); }
-.farm-body dd { margin: 0; word-break: break-all; }
+.farm-body dt { color: var(--texto-suave); overflow-wrap: anywhere; }
+.farm-body dd { margin: 0; overflow-wrap: anywhere; }
 .farm-body h3 { font-size: .85rem; margin: 0 0 6px; }
 .mono { font-family: ui-monospace, Consolas, monospace; font-size: .74rem; }
 
