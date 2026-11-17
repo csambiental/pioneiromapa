@@ -47,7 +47,11 @@
     "Área na matrícula": "18,23 ha (diferença de 0,64 ha para o CAR)",
     "Licença ambiental": "RLAS nº 383652-R2 – válida até 21/08/2032",
     "Água": "Poço tubular de 150 m (Aquífero Itararé) – DUIO 12509/2022 vencida em 22/06/2025",
-    "Matrícula": "7.679 – 18,23 ha"
+    "Matrícula": "7.679 – 18,23 ha",
+    "Análise automática – vegetação nativa": "26,7% do imóvel (20% ou mais)",
+    "Análise automática – agricultura": "51,7% do imóvel (2023)",
+    "Análise automática – SIGEF": "Não localizado no SIGEF",
+    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 2 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -61,6 +65,10 @@
     {
      "titulo": "Dispensa de outorga DUIO 12509/2022 (vencida)",
      "arquivo": "docs/G01/outorga.pdf"
+    },
+    {
+     "titulo": "Raio-X automático do imóvel (Análise Rural CS)",
+     "arquivo": "https://csambiental.github.io/territoriogeo/analise/?m=4128500&car=PR-4128500-49460DA2F5B741B5BD05059C3569AB58"
     }
    ],
    "adequacoes": [
@@ -129,7 +137,10 @@
     "Situação do CAR": "Aguardando análise",
     "Licença ambiental": "LAC nº 372424 – válida até 08/04/2028 (empreendimento “Sítio Rodriguez”)",
     "Água": "Poço tubular – DUIO 11103/2026, válida até 18/02/2032",
-    "Matrícula": "15.921 – 6,05 ha (compra em 03/11/2022)"
+    "Matrícula": "15.921 – 6,05 ha (compra em 03/11/2022)",
+    "Análise automática – vegetação nativa": "75,4% do imóvel (20% ou mais)",
+    "Análise automática – SIGEF": "Não localizado no SIGEF",
+    "Análise automática – APP estimada": "0,59 ha (0 trecho(s) de rio e 4 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -143,6 +154,10 @@
     {
      "titulo": "Dispensa de outorga DUIO 11103/2026",
      "arquivo": "docs/G02/outorga.pdf"
+    },
+    {
+     "titulo": "Raio-X automático do imóvel (Análise Rural CS)",
+     "arquivo": "https://csambiental.github.io/territoriogeo/analise/?m=4109708&car=PR-4109708-E2AFCF4F2AD04914BC00F04692603D27"
     }
    ],
    "adequacoes": [
@@ -220,7 +235,10 @@
     "Matrícula": "22.026 – 5,2067 ha",
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386770 – válida até 25/09/2031",
-    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração"
+    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração",
+    "Análise automática – vegetação nativa": "0% do imóvel ()",
+    "Análise automática – SIGEF": "Certificado (≥ 50% da área)",
+    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -234,6 +252,10 @@
     {
      "titulo": "Dispensa de outorga DUIO 16682/2026",
      "arquivo": "docs/G03/outorga.pdf"
+    },
+    {
+     "titulo": "Raio-X automático do imóvel (Análise Rural CS)",
+     "arquivo": "https://csambiental.github.io/territoriogeo/analise/?m=4109708&car=PR-4109708-13D4C61839A048368A06AD33523BACD2"
     }
    ],
    "adequacoes": [
@@ -319,7 +341,11 @@
     "Matrícula": "22.024 – 6,2428 ha",
     "Situação do CAR": "Aguardando análise (inscrito em 2026)",
     "Licença ambiental": "LAS nº 386771 – válida até 25/09/2031",
-    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração"
+    "Água": "Captação em mina/nascente compartilhada pelos Lotes 01 A e 01 C – DUIO 16682/2026 (230.400 aves), válida até 11/08/2032; poço com anuência de perfuração",
+    "Análise automática – vegetação nativa": "0% do imóvel (Menos de 5%)",
+    "Análise automática – agricultura": "100,0% do imóvel (2023)",
+    "Análise automática – SIGEF": "Certificado (≥ 50% da área)",
+    "Análise automática – APP estimada": "0,00 ha (0 trecho(s) de rio e 1 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -333,6 +359,10 @@
     {
      "titulo": "Dispensa de outorga DUIO 16682/2026",
      "arquivo": "docs/G04/outorga.pdf"
+    },
+    {
+     "titulo": "Raio-X automático do imóvel (Análise Rural CS)",
+     "arquivo": "https://csambiental.github.io/territoriogeo/analise/?m=4109708&car=PR-4109708-141008E9229246CCB751C629CF6569D4"
     }
    ],
    "adequacoes": [
@@ -405,7 +435,11 @@
     "Situação do CAR": "Analisado, em conformidade com a Lei 12.651/2012",
     "Licença ambiental": "LAC nº 379544 – válida até 02/07/2028",
     "Água": "Poço raso – DUIO 15365/2026, válida até 01/07/2032",
-    "Matrícula": "465 (2,85 ha) + 13.340 – unificadas no CCIR com 5,8757 ha"
+    "Matrícula": "465 (2,85 ha) + 13.340 – unificadas no CCIR com 5,8757 ha",
+    "Análise automática – vegetação nativa": "15,7% do imóvel (10% a 20%)",
+    "Análise automática – agricultura": "16,7% do imóvel (2023)",
+    "Análise automática – SIGEF": "Não localizado no SIGEF",
+    "Análise automática – APP estimada": "0,02 ha (4 trecho(s) de rio e 0 nascente(s) no entorno de 300 m)"
    },
    "documentos": [
     {
@@ -419,6 +453,10 @@
     {
      "titulo": "Dispensa de outorga DUIO 15365/2026",
      "arquivo": "docs/G05/outorga.pdf"
+    },
+    {
+     "titulo": "Raio-X automático do imóvel (Análise Rural CS)",
+     "arquivo": "https://csambiental.github.io/territoriogeo/analise/?m=4112801&car=PR-4112801-9909EF3F019B46418EE22313A6238908"
     }
    ],
    "adequacoes": [
@@ -614,7 +652,153 @@
    }
   }
  ],
- "camadas": [],
+ "camadas": [
+  {
+   "id": "an-app",
+   "nome": "APP estimada (faixa legal)",
+   "arquivo": "data/analise/app.geojson",
+   "tipo": "fill",
+   "cor": "#e53935",
+   "opacidade": 0.35,
+   "rotulo": false,
+   "campos": [
+    "propriedade",
+    "Área (ha)",
+    "Critério"
+   ]
+  },
+  {
+   "id": "an-rios",
+   "nome": "Rios e córregos (FBDS)",
+   "arquivo": "data/analise/rios.geojson",
+   "tipo": "line",
+   "cor": "#29b6f6",
+   "rotulo": false
+  },
+  {
+   "id": "an-nascentes",
+   "nome": "Nascentes (FBDS)",
+   "arquivo": "data/analise/nascentes.geojson",
+   "tipo": "circle",
+   "cor": "#00e5ff",
+   "rotulo": false,
+   "campos": [
+    "propriedade"
+   ]
+  },
+  {
+   "id": "an-massas",
+   "nome": "Represas e massas d'água",
+   "arquivo": "data/analise/massas.geojson",
+   "tipo": "fill",
+   "cor": "#1e88e5",
+   "opacidade": 0.5,
+   "rotulo": false,
+   "campos": [
+    "Tipo",
+    "Área (ha)"
+   ]
+  },
+  {
+   "id": "an-sigef",
+   "oculta": true,
+   "nome": "Parcelas certificadas (SIGEF)",
+   "arquivo": "data/analise/sigef.geojson",
+   "tipo": "fill",
+   "cor": "#ab47bc",
+   "opacidade": 0.15,
+   "rotulo": false,
+   "campos": [
+    "propriedade",
+    "Situação",
+    "Certificado em",
+    "Área (ha)"
+   ]
+  },
+  {
+   "id": "an-vizinhos",
+   "oculta": true,
+   "nome": "Imóveis vizinhos (CAR)",
+   "arquivo": "data/analise/vizinhos.geojson",
+   "tipo": "fill",
+   "cor": "#bdbdbd",
+   "opacidade": 0.08,
+   "rotulo": false,
+   "campos": [
+    "CAR",
+    "Área (ha)",
+    "Situação"
+   ]
+  },
+  {
+   "id": "an-outorgas",
+   "nome": "Outorgas de água no entorno (1 km)",
+   "arquivo": "data/analise/outorgas.geojson",
+   "tipo": "circle",
+   "cor_por": "grupo",
+   "rotulo": false,
+   "cores": {
+    "Captação superficial": "#0288d1",
+    "Poço (água subterrânea)": "#6a1b9a",
+    "Barragem / soleira": "#00897b",
+    "Lançamento de efluentes": "#8d6e63",
+    "Obras e intervenções em rios": "#f9a825"
+   },
+   "campos": [
+    "Documento",
+    "Portaria / declaração",
+    "Situação",
+    "Finalidade",
+    "Corpo hídrico / aquífero",
+    "Vazão máxima (m³/h)",
+    "Vencimento",
+    "Distância da propriedade"
+   ]
+  },
+  {
+   "id": "an-licencas",
+   "oculta": true,
+   "nome": "Licenças ambientais no entorno (1 km)",
+   "arquivo": "data/analise/licencas.geojson",
+   "tipo": "circle",
+   "cor_por": "grupo",
+   "rotulo": false,
+   "cores": {
+    "Licença de Operação": "#2e7d32",
+    "Licença Simplificada": "#66bb6a",
+    "Dispensa de licenciamento": "#9e9d24",
+    "Licença Prévia / de Instalação": "#ffa000",
+    "Licença por Adesão e Compromisso": "#26a69a",
+    "Autorização Ambiental": "#5c6bc0"
+   },
+   "campos": [
+    "Situação",
+    "Atividade",
+    "Nº do documento",
+    "Emissão",
+    "Validade",
+    "Protocolo",
+    "Distância da propriedade"
+   ]
+  },
+  {
+   "id": "an-barragens",
+   "oculta": true,
+   "nome": "Barragens cadastradas (SNISB)",
+   "arquivo": "data/analise/barragens.geojson",
+   "tipo": "circle",
+   "cor": "#ff7043",
+   "rotulo": false,
+   "campos": [
+    "Categoria de risco",
+    "Dano potencial associado (DPA)",
+    "Uso principal",
+    "Curso d'água",
+    "Altura (m)",
+    "Distância da propriedade"
+   ]
+  }
+ ],
  "programa": {
   "titulo": "O projeto",
   "texto": "Mapeamento das granjas integradas à Frangos Pioneiro (Projeto Pioneiros – CS 38170): perímetro do CAR, aviários, pontos de captação de água, licenças ambientais e dispensas de outorga do IAT, com a lista do que falta regularizar em cada granja. As informações vêm dos documentos dos produtores e das bases públicas do SICAR. Os documentos de cada granja (recibo do CAR, licença e dispensa de outorga) podem ser abertos na ficha, com CPF, RG, e-mail e endereço residencial tarjados.",
